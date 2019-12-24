@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>电视剧</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		ul,li{
+			list-style:none;
+		}
+		#top{
+			width:100%;
+			height:20px;
+			background-size:100% 100%;
+			background:#acc;
+			float:left;
+		}
+		#attention{
+			line-height:20px;
+			margin-left:260px;
+			margin-right:10px;
+			float:left;		
+		}
+		#tishi{
+			color:#289;
+			font-size:12px;
+			line-height:20px;
+			position:relative;
+			left:970px;
+		}
+		#list{
+			width:100%;
+			height:100px;
+			background:#fff;
+		}
+		#navlist{
+			width:100%
+			height:60px;
+			font-size:20px;
+			background:#acc;
+			border-top:solid 2px #1aa;
+		}
+		#m_list{
+			color:#267;
+			background:#acc;
+			border:1px solid #acc;	
+		}
+		#navlist>ul>li{
+			list-style-type:none;
+			display:inline-block;
+			line-height:40px;
+		}
+		#navlist>ul>li>a:hover{
+			border-bottom:4px solid #267/*#3aa747*/;
+			/*color:#3aa747;*/
+			color:#267;
+		}
+		#navlist>ul>li>select{
+			padding-left:20px;
+			padding-right:20px;
+			padding-bottom:7px;
+			text-decoration:none;
+			color:#267;
+		}
+		#navlist>ul>li>select:hover{
+			border-bottom:4px solid #267;
+			color:#267;
+		}
+		#navlist>ul>li>a{
+			padding-left:20px;
+			padding-right:20px;
+			padding-bottom:7px;
+			text-decoration:none;
+			color:#267;
+		}
+		#Teleplay{
+			border-bottom:4px solid #267
+		}
+		.list2>input{
+				width:540px;
+				height:30px;
+				text-align:center;
+				color:#000;
+		}
+		#logo{
+				width:400px;
+				height:80px;
+				float:left;
+		}
+		#logo>p{
+			font-size:40px;
+			font-family:"华文行楷";
+			height:80px;
+			color:#267;
+			line-height:80px;
+		}
+		.headersearch{
+			width:700px;
+			height:80px;
+			/*background:blue;*/
+			float:left;
+		}
+		.headersearch>input{
+			border:solid 2px #acc;
+			color:#ccc;
+			width:500px;
+			height:40px;
+			position:relative;
+			left:30px;
+			top:20px;
+		}
+		.search_click{
+			border:solid 2px #acc;
+			width:50px;
+			height:40px;
+			position:relative;
+			left:530px;
+			bottom:24px;
+		}
+		.search_click>button{
+			width:50px;
+			height:40px;
+			background:#acc;
+		}
+		#kong{
+			height:12px;
+			background:#acc;
+			border-top:1px dashed #1aa;
+		}
+		#d_main{
+			height:480px;
+			background:red;
+			background-size:100% 100%;
+
+			background:#acc;
+		}
+		#box{
+			border:2px solid #aca;
+			width:1450px;
+			height:400px;
+			margin:0 auto;
+			position:relative;
+			overflow:hidden;
+
+		}
+		#d_1{
+			border:2px solid #aca;
+			width:400px;
+			height:400px;
+			position:relative;
+			overflow:hidden;
+			float:left;
+		}
+		.slider{
+			width:2800px;
+			position:absolute;
+			left:-400px;
+		}
+		.slide{
+			width:400px;
+			overflow:hidden;
+			float:left;
+		}
+		.slide>img{
+			width:400px;
+			height:400px;
+		}
+		#d_1>span{
+			display:block;
+			width:30px;
+			height:50px;
+			text-align:center;
+			cursor:pointer;
+			color:#fff;
+			top:175px;
+			line-height:50px;
+			/*background:rgb(255,0,0);*/
+			background:#189;
+			font-size:30px;
+			position:absolute;
+			/*display:none;*/
+			opacity:0;
+		}
+		#left{
+			left:30px;
+		}
+		#right{
+			right:30px;
+		}
+		#d_2{
+			width:400px;
+			height:400px;
+			float:left;
+		}
+		#d_3{
+			width:440px;
+			height:400px;
+			float:left;
+		}
+		#d_4{
+			width:200px;
+			height:400px;
+			float:left;
+		}
+		.nav{
+			position:absolute;
+			left:80px;
+			bottom:22px;
+		}
+		.nav>li{
+			text-align:center;
+			float:left;
+			width:30px;
+			height:5px;
+			background:#ccc;
+			color:#000;
+			cursor:pointer;
+			margin:0 10px;
+		}
+		.nav .active{
+			color:#fff;
+			background:#19a;
+		}
+		#scroll1{
+			width:970px;
+			overflow:hidden;
+			float:left;
+		}
+		.d1{
+			width:400px;
+			height:200px;
+			float:top;
+		}
+		.d2{
+			width:220px;
+			height:400px;
+			float:left;
+		}
+		.d3{
+			width:205px;
+			height:200px;
+			float:top;
+		}
+
+		/*==================================*/
+		.goods{
+			background:#acc;
+			height:1400px;
+			width:100%;
+	    }
+		.photo{
+			width:1200px;
+			height:1400px;
+			background-color:#ffffff;
+			margin:0 auto;
+			background:#acc;
+			border-top:2px dashed #1aa;
+			border-bottom:2px dashed #1aa;
+		}
+		.img1{
+			width:270px;
+			height:292px;
+			background-image:url(images/tt1.png);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			text-align:center;
+			border:1px solid #88888888;
+			margin:20px 15px 18px 12px;
+			float:left;
+			z-index:0;
+		}
+		.wenzi{
+			width:270px;
+			height:292px;
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			text-align:center;
+			border:1px solid #88888888;
+			margin:20px 15px 18px 12px;
+			float:left;
+			z-index:0;
+			overflow:auto;
+		}
+		#p1{
+			width:270px;
+			height:53px;
+			margin-top:240px;
+			background:#000000;
+			opacity:0.65;
+			z-index:-1;
+		}
+		#p11{
+			width:270px;
+			height:292px;
+			font-size:20px;
+			background:#000000;
+			opacity:0.65;
+			color:#ffffff;
+			z-index:-1;
+			display:none;
+		}
+		#p11>li{
+			list-style-type: none;
+		}
+		#p11>ul{
+			padding-top:120px;
+		}
+		.img1:hover #p1{
+			display:none;
+		}
+		.img1:hover #p11{
+			display:block;
+		}
+		.img2{
+			width:270px;
+			height:292px;
+			background-image:url(images/tt2.jpg);
+			background-size:100% 100%;
+			background-repeat: no-repeat;
+			text-align:center;
+			border:1px solid #88888888;
+			margin:20px 15px 18px 12px;
+			float:left;
+			z-index:0;
+		}
+		.p2{
+			width:270px;
+			height:53px;
+			margin-top:240px;
+			background:#000000;
+			opacity:0.65;
+			z-index:-1;
+		}
+		#p22{
+			width:270px;
+			height:292px;
+			font-size:20px;
+			background:#000000;
+			opacity:0.65;
+			color:#ffffff;
+			z-index:-1;
+			display:none;
+		}
+		#p22>li{
+			list-style-type: none;
+		}
+		#p22>ul{
+			padding-top:120px;
+		}
+		.img2:hover .p2{
+			display:none;
+		}
+		.img2:hover #p22{
+			display:block;
+		}
+		.img3{
+			width:270px;
+			height:292px;
+			background-image:url(images/tt3.jpg);
+			background-repeat: no-repeat;
+			background-size:100% 100%;
+			float:left;
+			text-align:center;
+			border:1px solid #88888888;
+			margin:20px 15px 18px 12px;
+			z-index:0;
+		}
+		#p33{
+			width:270px;
+			height:292px;
+			font-size:20px;
+			background:#000000;
+			opacity:0.65;
+			color:#ffffff;
+			z-index:-1;
+			display:none;
+		}
+		#p33>li{
+			list-style-type: none;
+		}
+		#p33>ul{
+			padding-top:120px;
+		}
+		.img3:hover .p2{
+			display:none;
+		}
+		.img3:hover #p33{
+			display:block;
+		}
+		.img4{
+			width:270px;
+			height:292px;
+			float:left;
+			background-image:url(images/tt4.jpg);
+			background-repeat: no-repeat;
+			background-size:100% 100%;
+			text-align:center;
+			border:1px solid #88888888;
+			margin:20px 15px 18px 12px;
+			z-index:0;
+		}
+		#p44{
+			width:270px;
+			height:292px;
+			font-size:20px;
+			background:#000000;
+			opacity:0.65;
+			color:#ffffff;
+			z-index:-1;
+			display:none;
+		}
+		#p44>li{
+			list-style-type: none;
+		}
+		#p44>ul{
+			text-align:center;
+			padding-top:120px;
+		}
+		.img4:hover .p2{
+			display:none;
+		}
+		.img4:hover #p44{
+			display:block;
+		}
+		.img5{
+			width:270px;
+			height:292px;
+			float:left;
+			background-image:url(images/tt5.jpg);
+			background-repeat: no-repeat;
+			background-size:100% 100%;
+			text-align:center;
+			border:1px solid #88888888;
+			margin:20px 15px 18px 12px;
+		}
+		#p55{
+			width:270px;
+			height:292px;
+			font-size:20px;
+			background:#000000;
+			opacity:0.65;
+			color:#ffffff;
+			z-index:-1;
+			display:none;
+		}
+		#p55>li{
+			list-style-type: none;
+		}
+		#p55>ul{
+			text-align:center;
+			padding-top:120px;
+		}
+		.img5:hover .p2{
+			display:none;
+		}
+		.img5:hover #p55{
+			display:block;
+		}
+		.img6{
+			width:270px;
+			height:292px;
+			float:left;
+			background-image:url(images/tt6.png);
+			background-repeat: no-repeat;
+			background-size:100% 100%;
+			text-align:center;
+			border:1px solid #88888888;
+			margin:20px 15px 18px 12px;
+		}
+		#p66{
+			width:270px;
+			height:292px;
+			font-size:20px;
+			background:#000000;
+			opacity:0.65;
+			color:#ffffff;
+			z-index:-1;
+			display:none;
+		}
+		#p66>li{
+			list-style-type: none;
+		}
+		#p66>ul{
+			text-align:center;
+			padding-top:120px;
+		}
+		.img6:hover .p2{
+			display:none;
+		}
+		.img6:hover #p66{
+			display:block;
+		}
+		.img7{
+			width:270px;
+			height:292px;
+			float:left;
+			background-image:url(images/tt7.jpg);
+			background-size:cover;
+			background-repeat: no-repeat;
+			/*background-size:100% 100%;*/
+			text-align:center;
+			border:1px solid #88888888;
+			margin:20px 15px 20px 13px;
+		}
+		#p77{
+			width:270px;
+			height:292px;
+			font-size:20px;
+			background:#000000;
+			opacity:0.65;
+			color:#ffffff;
+			z-index:-1;
+			display:none;
+		}
+		#p77>li{
+			list-style-type: none;
+		}
+		#p77>ul{
+			text-align:center;
+			padding-top:120px;
+		}
+		.img7:hover .p2{
+			display:none;
+		}
+		.img7:hover #p77{
+			display:block;
+		}
+		.img8{
+			width:270px;
+			height:292px;
+			float:left;
+			background-image:url(images/tt8.jpg);
+			background-repeat: no-repeat;
+			background-size:100% 100%;
+			text-align:center;
+			border:1px solid #88888888;
+			margin:20px 15px 20px 13px;
+		}
+		#p88{
+			width:270px;
+			height:292px;
+			font-size:20px;
+			background:#000;
+			opacity:0.65;
+			color:#ffffff;
+			z-index:-1;
+			display:none;
+		}
+		#p88>li{
+			list-style-type: none;
+		}
+		#p88>ul{
+			text-align:center;
+			padding-top:120px;
+		}
+		.img8:hover .p2{
+			display:none;
+		}
+		.img8:hover #p88{
+			display:block;
+		}
+		
+		
+		.di>li{
+			display:inline-block;
+			list-style-type:none;
+		}
+		.title{
+			line-height:20px;
+			color:#ffffff;/*#ffffff*/
+			padding-top:10px;
+		}
+		.title>li{
+			font-size:14.83px;
+			list-style-type:none;
+		}
+		#biao{
+        	position: fixed;
+  			top:630px;
+ 		   	left:1400px;
+        }
+		.mowei{
+           height:100px;
+           width:100%;
+           background-color:#323232;
+           border:2px solid #1c1c1c;
+        }
+        .mowei-yi{
+           width:1200px;
+           margin:0 auto;
+        }
+        .mowei-yi>p{
+           color:white;
+           font-size:14px;
+           text-align:center;
+        }
+        #a-yi{
+           margin-top:28px;
+        }
+        #a-er{
+           margin-top:15px;
+        }
+	</style>
+</head>
+<body>
+	<div id="top">
+			<div id="attention">
+				<img src="./images/a15.png">
+			</div>
+			<div id="scroll1">
+				<p id="tishi">[温馨提示]新上映剧情，请大家注意!!!</p>
+			</div>
+	</div>
+	<div id="list">
+			<div id="logo">
+				<p style="color:#267;padding-left:50px">推予</p>
+			</div>
+			<div class="headersearch">
+				<input type="text"value="请输入搜索内容"name="search"/>
+				<div class="search_click">
+					<button >搜索</button>	
+				</div>
+			</div>
+
+	</div>
+	<div id="navlist">
+		<ul>
+			<li class="list1">
+				<select id="m_list"style="font-size:20px ">
+					<option><a href="#">全部影视分类</a></option>
+					<option value = "one"><a href="shows.html">首页</a></option>           
+					<option value = "two"><a id="Teleplay" href="Teleplay.html">电视剧</a></option>           
+					<option value = "three"><a href="Film.html">电影</a></option> 
+					<option value = "four"><a href="#">综艺</a></option> 
+					<option value = "five"><a href="#">动画片</a></option> 
+				</select>
+			</li>
+			<li class="list2"><a href="#">首页</a></li>	
+			<li class="list2"><a id="Teleplay"href="Teleplay.html">电视剧</a></li>	
+			<li class="list2"><a href="#">电影</a></li>	
+			<li class="list2"><a href="#">综艺</a></li>	
+			<li class="list2"><a href="#">动画片</a></li>
+		</ul>
+	</div>	
+	<div id="kong"></div>
+	<div id="d_main">
+		<div class="box" id="box">
+			<div id="d_1">
+				<div class="slider" id="slider">
+					<div class="slide">
+						<img src="images/t5.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="images/t1.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="images/t2.jpeg" alt="">
+					</div>
+					<div class="slide">
+						<img src="./images/t3.jpeg" alt="">
+					</div>
+					<div class="slide">
+						<img src="./images/t4.png" alt="">
+				    </div>
+				    <div class="slide">
+						<img src="./images/t5.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="./images/t1.jpg" alt="">
+					</div>
+				</div>
+				<span id="left"><</span>
+				<span id="right">></span>
+				<ul class="nav" id="nav">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>	
+			</div>
+			
+			<div id="d_2">
+				<img class="d1" src="images/t6.jpg">
+				<img class="d1" src="images/t7.jpg">
+			</div>
+			<div id="d_3">
+				<img class="d2" src="images/t8.jpg">
+				<img class="d2" src="images/t9.jpeg">
+			</div>
+			<div id="d_4">
+				<img class="d3" src="images/t10.jpg">
+				<img class="d3" src="images/t11.jpg">
+			</div>
+		</div>
+
+	</div>
+	<div class="goods">
+			<div class="photo">
+				<div class="img1">
+					<div id="p1">
+						<ul class="title">
+						<li>《我的前半生》</li>
+			            <li>评分：6.3分</li>
+	           			</ul>
+	                </div>
+	                <div id="p11">
+	                	<ul>
+	                	<li>导演：沈严</li>
+	                	<li><ul class="di">
+							<li>主角：</li>
+							<li>靳东、马伊琍、袁泉</li>
+							<li>雷佳音、吴越</li>
+							</ul>
+						</li>
+			            <li>《我的前半生》</li>
+			            <li>类型：剧情|家庭</li>
+	           			</ul>
+	                </div>
+				</div>
+				<div class="wenzi">
+	                	<ul>
+			            <li>《我的前半生》</li>            <li>简介：该剧讲述了生活优越安逸的全职太太罗子君与丈夫陈俊生离婚后一切归零，在闺蜜唐晶及其男友贺涵的帮助下打破困境，进入职场，在自我成长中走向人生下一程的故事</li>
+	           			</ul>
+				</div>
+				<div class="img2">
+					<div class="p2">
+						<ul class="title">
+						<li>《楚乔传》</li>
+                  		<li>评分：5.1分</li>
+                  		</ul>
+					</div>
+					<div id="p22">
+						<ul>
+						<li>导演：吴锦源、张乾文、陈国</li>
+						<li><ul class="di">
+			 				<li>主角：</li>
+							<li>赵丽颖、林更新</li>
+							<li>窦骁、李沁</li>
+							</ul>
+						</li>
+			            <li>《楚乔传》</li>
+			            <li>类型：爱情|古装|武侠</li>
+	           			</ul>
+					</div>
+				</div>
+				<div class="wenzi">
+						<ul>
+						<li>《楚乔传》</li>
+			            <li>简介：西魏乱世年间，平民百姓受到战乱的波及，许多百姓失去家园，流落在乱世之中。许多百姓成为战乱中的牺牲品，沦落为官宦家中的奴隶，命如草芥。楚乔（赵丽颖饰演），一名奴籍少女沦落为贵族奴隶，被送入贵族猎场射杀供贵族娱乐，有幸得到西凉世子燕洵（窦骁饰演）暗中相救。之后被送入权倾朝野的世家宇文家，目睹亲人的惨死，发誓要逃出牢笼。此时，宇文玥（林更新饰演）关注到楚乔，而楚乔与燕洵结下深厚友谊，战乱期间，燕洵全家被杀，楚乔助燕洵逃出困境。后期，燕洵为称霸，不惜牺牲全城百姓性命，楚乔离去，与宇文玥合力扰乱燕洵的复仇计划，奴隶暴政从此消失。</li>
+	           			</ul>
+				</div>
+				<div class="img3">
+					<div class="p2">
+						<ul class="title">
+                  		<li>《我只喜欢你》</li>
+                  		<li>评分：7.5分</li>
+                  		</ul>
+               		 </div>
+               		 <div id="p33">
+               		 	<ul>
+               		 	<li>导演：王之</li>
+               		 	<li><ul class="di">
+               		 		<li>主演：</li>
+               		 		<li>吴倩</li>
+               		 		<li>张雨剑</li>
+               		 		</ul>
+               		 	</li>
+               		 	<li>《我只喜欢你》</li>
+               		 	<li>类型：都市|爱情</li>
+               		 	</ul>
+               		 </div>
+				</div>
+				<div class="wenzi">
+               		 	<ul>
+               		 	<li>《我只喜欢你》</li>
+               		 	<li>简介：该剧改编自乔一散文随笔《我不喜欢这世界，我只喜欢你》，讲述了平凡女孩儿赵乔一和学霸言默从高中到大学、从校园到职场、从校服到婚纱，共同成长、深爱如初而后终成眷属的爱情故事。</li>
+               		 	</ul>
+				</div>
+				<div class="img4">
+					<div class="p2">
+						<ul class="title">
+                  		<li>《全职高手》</li>
+                  		<li>评分：7.4分</li>
+                 	 </ul>
+               		 </div>
+               		 <div id="p44">
+               		 	<ul>
+               		 	<li>导演：十一月</li>
+               		 	<li><ul class="di">
+               		 		<li>主演：</li>
+               		 		<li>杨洋</li>
+               		 		<li>江疏影</li>
+               		 		<li>赖雨濛，赖艺，李沐宸</li>
+               				</ul>
+               		 	</li>
+               		 	<li>《全职高手》</li>
+               		 	<li>类型：游戏|竞技</li>
+               		 	</ul>
+               		 </div>
+				</div>
+				<div class="wenzi">
+               		 	<ul>
+               		 	<li>《全职高手》</li>
+               		 	<li>简介：故事讲述网游荣耀中被誉为教科书级别的顶尖高手叶修，因为种种原因遭到俱乐部的驱逐，离开职业圈的他寄身于一家网吧成了一个小小的网管，但是，拥有十年游戏经验的他，在荣耀新开的第十区重新投入了游戏，带着对往昔的回忆，和一把未完成的自制武器，开始了重返巅峰之路。</li>
+               		 	</ul>
+				</div>
+				<div class="img5">
+					<div class="p2">
+						<ul class="title">
+						<li>《你和我的倾城时光》</li>
+                  		<li>评分：5.5分</li>
+                  	</ul>
+					</div>
+					<div id="p55">
+               		 	<ul>
+               		 	<li>导演：张峰、余中和</li>
+               		 	<li><ul class="di">
+               		 		<li>主演：</li>
+               		 		<li >赵丽颖</li>
+               		 		<li>金瀚</li>
+               				</ul>
+               		 	</li>
+               		 	<li>《你和我的倾城时光》</li>
+               		 	<li>类型：商战|都市|爱情</li>
+               		 	</ul>
+               		 </div>
+				</div>
+				<div class="wenzi">
+               		 	<ul>
+               		 	<li>《你和我的倾城时光》</li>
+               		 	<li> 简介：因为家族企业遇到经营困境，厉致诚临危受命，成为一家企业的负责人，并且因此邂逅刚出校门、创业碰壁的都市白领林浅。由于厉致诚全无商业经验，所以企业内外部都不看好这位总裁。林浅是一位非常正直善良的女性，凭借自己的职场经验和理想追求，给予厉致诚很大帮助。厉致诚将用自己的智慧和独特方法运用到企业的实际经营中，竟令企业起死回生，并且一步步走向辉煌；而他和林浅两人也在这个过程中相识、相知、相爱。然而这时，国际外资企业亦看到了该公司的丰厚利润和发展前景，提出了高额收购。怀揣着兴企爱国的梦想，厉致诚、林浅等年轻民营企业家，拒绝了收购，而是致力于产品的质量、创意提高和企业形象的经营。最终，二人使企业一步步走向世界，并且收获了爱情。</li>
+               		 	</ul>
+				</div>
+				<div class="img6">
+					<div class="p2">
+						<ul class="title">
+						<li>《陈情令》</li>
+                  		<li>评分：8.2分</li>
+                  	</ul>
+					</div>
+					<div id="p66">
+               		 	<ul>
+               		 	<li>导演：郑伟文、陈家霖</li>
+               		 	<li><ul class="di">
+               		 		<li>主角：</li>
+               		 		<li>肖战、王一博</li>
+               		 		<li>孟子义、宣璐</li>
+               		 		<li>汪卓成、于斌、刘海</li>
+               				</ul>
+               		 	</li>
+               		 	<li>《陈情令》</li>
+               		 	<li>类型：古装|权谋|仙侠</li>
+               		 	</ul>
+               		 </div>
+				</div>
+				<div class="wenzi">
+               		 	<ul>
+               		 	<li>《陈情令》</li>
+               		 	<li>简介：该剧根据墨香铜臭小说《魔道祖师》改编，以五大家族为背景，讲述了云梦江氏故人之子魏无羡和姑苏蓝氏含光君蓝忘机重遇，携手探寻往年真相，守护百姓和平安乐的故事。</li>
+               		 	</ul>
+				</div>
+				<div class="img7">
+					<div class="p2">
+						<ul class="title">
+						<li>《庆余年》</li>
+                  		<li>评分：7.9分</li>
+                  	</ul>
+					</div>
+					<div id="p77">
+               		 	<ul>
+               		 	<li>导演：孙皓</li>
+               		 	<li><ul class="di">
+               		 		<li>主演：</li>
+               		 		<li>张若昀、李沁</li>
+               		 		<li>李小冉、陈道明</li>
+               		 		<li>吴刚、辛芷蕾、郭麒麟</li>
+               				</ul>
+               		 	</li>
+               		 	<li>《庆余年》</li>
+               		 	<li>类型：古装</li>
+               		 </div>
+				</div>
+				<div class="wenzi">
+               		 	<ul>
+               		 	<li>《庆余年》</li>
+               		 	<li>简介：范闲十五岁的时候，父亲范建及监察院院长陈萍萍派用毒高手费介教他识毒用毒和武功，四年后范闲武力已属上乘。在破解了一场投毒事件后，他带着危机感和对真相的探索前赴京都。在熟悉京都的过程中，范闲见识了柳如玉和弟弟范思辙的下马威，对未来的妻子林婉儿一见钟情，也看到了亭亭玉立的才女妹妹范若若。然而随即平静的生活就被突然打破，范闲在牛栏街上遭遇了一场围杀，滕梓荆为救范闲而死，各方庆贺范闲的逃生，更引得太子和二皇子争相拉拢，却无人在意死去的卑微侍卫滕梓荆，范闲感到心寒，更加理解母亲叶轻眉要改变世界的想法。在充满正义的小伙伴们的帮助下，范闲历经千山万水，不断克服各种困难。在这个过程中，范闲饱尝人间冷暖，但依然不忘赤子之心，坚定着自己的理想。</li>
+               		 	</ul>
+				</div>
+				<div class="img8">
+					<div class="p2">
+						<ul class="title">
+						<li>《琅琊榜》</li>
+                  		<li>评分：8.5分</li>
+                  	</ul>
+					</div>
+					<div id="p88">
+               		 	<ul>
+               		 	<li>导演：孔笙、李雪</li>
+               		 	<li><ul class="di">
+               		 		<li>主演：</li>
+               		 		<li>胡歌、刘涛、王凯</li>
+               		 		<li>黄维德、陈龙</li>
+               		 		<li>吴磊、高鑫</li>
+               				</ul>
+               		 	</li>
+               		 	<li>《琅琊榜》</li>
+               		 	<li>类型：古装</li>
+               		 </div>
+				</div>
+				<div class="wenzi">
+					<ul>
+               		 	<li>《琅琊榜》</li>
+               		 	<li>简介：该剧根据海宴同名网络小说改编，以平反冤案、扶持明君、振兴山河为主线，讲述了“麒麟才子”梅长苏才冠绝伦、以病弱之躯拨开重重迷雾、智博奸佞，为昭雪多年冤案、扶持新君所进行的一系列斗争。</li>
+               		 </ul>
+				</div>
+			</div>
+	</div>
+	<div id = "biao">
+    		<div>
+	    		<a href="#">
+					<img src = "images/up.png">
+				</a>
+			</div>
+		</div>
+	 <div class="mowei">
+        <div class="mowei-yi">
+            <p id="a-yi">首页&nbsp;&nbsp;|&nbsp;&nbsp;推予互动娱乐&nbsp;&nbsp;|&nbsp;&nbsp;隐私保护指引&nbsp;&nbsp;|&nbsp;&nbsp;广告服务及商务合作&nbsp;&nbsp;|&nbsp;&nbsp;专业客服&nbsp;&nbsp;|&nbsp;&nbsp;服务条款&nbsp;&nbsp;|&nbsp;&nbsp;法律服务</p>
+            <p id="a-er"> 2019-2020 推予 版权所有</p>
+        </div>
+    </div>
+</body>
+<script>
+
+	//=======================================
+	var d_1=document.getElementById("box");
+	var navList=document.getElementById("nav").children;
+	var slider =document.getElementById("slider");
+	var left=document.getElementById("left");
+	var right=document.getElementById("right");
+	var index=1;
+	var isMoving=false;
+
+	//轮播下一张函数
+	function premove(){
+		index++;
+		navRed();
+		animate(slider,{left:-400*index},function(){
+			if(index==6){
+				slider.style.left="-400px";
+				index=1;
+			}
+		});
+	}
+	function remove(){
+		index--;
+		navRed();
+		animate(slider,{left:-400*index},function(){
+			if(index==0){
+				slider.style.left="-2000px";
+				index=5;
+			}
+		});
+	}
+	var timer=setInterval(premove,2000);//外层时间比动一次时间长
+	//鼠标划入清定时器
+	d_1.onmouseover=function(){
+		animate(left,{opacity:50})
+		animate(right,{opacity:50})
+		clearInterval(timer);
+	}
+	//鼠标划出开定时器
+	d_1.onmouseout=function(){
+		animate(left,{opacity:0})
+		animate(right,{opacity:0})
+		timer=setInterval(premove,2000);
+	}
+	//点击右箭头让下一张出现
+	right.onclick=premove;
+	//点击左箭头让前一张出现
+	left.onclick=remove;
+	//小按钮点击实现
+	for(var i=0;i<navList.length;i++){
+		navList[i].idx=i;
+		navList[i].onclick=function(){
+			index=this.idx+1;
+			navRed();
+			animate(slider,{left:-400*index});
+
+		}
+	}
+	//小按钮背景色切换
+	function navRed(){
+		for(var i=0;i<navList.length;i++){
+			navList[i].className="";
+		}
+		if(index==6){
+			navList[0].className="active";
+		}else if(index==0){
+			navList[4].className="active";
+		}else{
+			navList[index-1].className="active";
+		}
+	}
+	var attention=document.getElementById("attention");
+	var scroll1=document.getElementById("scroll1");
+	var tishi=document.getElementById("tishi");
+	var l=1;
+	function roll(){
+		l+=5;
+		if(l>1280){
+			tishi.style.left="1000px";
+			l=1;	
+		}
+		animate(tishi,{left:970-l});
+		
+	}
+	setInterval(roll,40);
+
+
+
+	function getStyle(obj, attr){
+	if(obj.currentStyle){
+		return obj.currentStyle[attr];
+	} else {
+		return getComputedStyle(obj, null)[attr];
+	}
+}
+function animate(obj,json,callback){
+	clearInterval(obj.timer);
+	obj.timer = setInterval(function(){
+		var isStop = true;
+		for(var attr in json){
+			var now = 0;
+			if(attr == 'opacity'){
+				now = parseInt(getStyle(obj,attr)*100);
+			}else{
+				now = parseInt(getStyle(obj,attr));
+			}
+			var speed = (json[attr] - now) / 8;
+			speed = speed>0?Math.ceil(speed):Math.floor(speed);
+			var cur = now + speed;
+			if(attr == 'opacity'){
+				obj.style[attr] = cur / 100;
+			}else{
+				obj.style[attr] = cur + 'px';
+			}
+			if(json[attr] !== cur){
+				isStop = false;
+			}
+		}
+		if(isStop){
+			clearInterval(obj.timer);
+			callback&&callback();
+		}
+	}, 30)
+}
+</script>
+</html>
