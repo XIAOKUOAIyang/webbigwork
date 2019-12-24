@@ -1,60 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>游戏</title>
-	<script src="./animate.js" type="text/javascript"></script>
-	<style>
-	*{
+    <meta charset="UTF-8">
+    <title>游戏</title>
+    <script src="./animate.js" type="text/javascript"></script>
+    <style>
+    *{
         margin:0;     
         padding: 0;
     }
     #all{
-    	background-color:rgb(230,230,230);
-    	margin:0 auto;
+        background-color:rgb(230,230,230);
+        margin:0 auto;
     }
 
     .head{
-    	margin:0 auto;
-    	width:700px;
-    	height:50px;
-    	border:3px inset white;
-    	background-color:white;
-    	border-radius:30%;
+        margin:0 auto;
+        width:700px;
+        height:50px;
+        border:3px inset white;
+        background-color:white;
+        border-radius:30%;
     }
     .head>p{
-    	font-family:Gilroy;
-    	color:#778a99;
-    	font-size:35px;
-    	font-weight:bold;
-    	float:left;
+        font-family:Gilroy;
+        color:#778a99;
+        font-size:35px;
+        font-weight:bold;
+        float:left;
     }
     #wen{
-    	margin-left:80px;
+        margin-left:80px;
     }
     #xin{
-    	color:red;
-    	margin-left:40px;
+        color:red;
+        margin-left:40px;
     }
     .shouye{
-    	margin:0 auto;
-    	margin-top:10px; 
+        margin:0 auto;
+        margin-top:10px; 
     }
     #s-er{
-    	margin-left:50px;
+        margin-left:50px;
     }
 
           
     #s-er>ul>li{
         width:70px;
         margin-top:4px;
+        color:#778a99;
         display:inline-block;
         list-style-type:none;
-        text-align:center;
-    }
-    #s-er>ul>li>a{
-        text-decoration:none;
-        color:#778a99;
         font-size:17px;
         text-align:center;
     }
@@ -71,212 +67,214 @@
     }  
 
     ul,li{
-    	list-style:none;
+        list-style:none;
     }
     .box{
-    	margin:0 auto;
-    	height:383px;
-    	width:1200px;
-    	margin:10px auto;
-    	position:relative;
-    	overflow:hidden;
+        margin:0 auto;
+        height:383px;
+        width:1200px;
+        margin:10px auto;
+        position:relative;
+        overflow:hidden;
     }
     .slider{
-    	width:8400px;
-    	position:absolute;
-    	left:-1200px;
+        width:8400px;
+        position:absolute;
+        left:-1200px;
     }
     .slide{
-    	width:1200px;
-    	overflow:hidden;
-    	float:left;
+        width:1200px;
+        overflow:hidden;
+        float:left;
     }
     .box>span{
-    	display:block;
-    	width:30px;
-    	height:50px;
-    	text-align:center;
-    	cursor:pointer;
-    	color:white;
-    	top:175px;
-    	line-height:50px;
-    	background:rgb(200,200,200);
-    	font-size:30px;
-    	position:absolute;
-    	opacity:0;
+        display:block;
+        width:30px;
+        height:50px;
+        text-align:center;
+        cursor:pointer;
+        color:white;
+        top:175px;
+        line-height:50px;
+        background:rgb(200,200,200);
+        font-size:30px;
+        position:absolute;
+        opacity:0;
     }
     #left{
-    	left:30px;
+        left:30px;
     }
     #right{
-    	right:30px;
+        right:30px;
     }
     .nav{
-    	position:absolute;
-    	/*left:500px;*/
-    	margin-left:540px;
-    	bottom:20px;
+        position:absolute;
+        /*left:500px;*/
+        margin-left:540px;
+        bottom:20px;
 
     }
     .nav>li{
-    	/*text-align:center;*/
-    	float:left;
-    	width:15px;
-    	height:15px;
-    	background:#ccc;
-    	color:black;
-    	cursor:pointer;
-    	margin:0 10px;
-    	border-radius:50%;
+        /*text-align:center;*/
+        float:left;
+        width:15px;
+        height:15px;
+        background:#ccc;
+        color:black;
+        cursor:pointer;
+        margin:0 10px;
+        border-radius:50%;
     }
 
     .nav .active{
-    	background:black;
-    	color:white;
+        background:black;
+        color:white;
     }
 
     .next{
-    	margin:0 auto;
+        margin:0 auto;
     }
     .one{
-    	text-align:center;
+        text-align:center;
     }
     .one>img{
-    	border-radius:50%;  	
+        border-radius:50%;      
     }
 
     .box1{
-    	margin:0 auto;
-    	margin-left:60px;
-    	margin-right:60px;
-    	border:1.5px solid rgb(130,0,180);
+        margin:0 auto;
+        margin-left:60px;
+        margin-right:60px;
+        border:1.5px solid rgb(130,0,180);
     }
     .box1-1{
-    	font-size:35px;
-    	font-family:华文行楷;
+        font-size:35px;
+        font-family:楷体;
 
     }
     .box1-2{
-    	color:rgb(130,0,180);
-    	font-size:25px;
-    	font-family:华文行楷;
+        color:rgb(130,0,180);
+        font-size:25px;
+        font-family:楷体;
     }
     .first>p{
-    	margin-top:20px;
-    	font-family:楷体;
-    	font-size:22px;
-    	/*color:rgb(140,140,140);*/
-    	text-align:center;
-    	width:100px;
-    	background-color:rgb(130,0,180);
-    	margin-bottom:10px;
-    	border-radius:30%;
-    	height:25px;
-    	width:115px;
+        margin-top:20px;
+        font-family:楷体;
+        font-size:22px;
+        /*color:rgb(140,140,140);*/
+        text-align:center;
+        width:100px;
+        background-color:rgb(130,0,180);
+        margin-bottom:10px;
+        border-radius:30%;
+        height:25px;
+        width:115px;
     }
     .first{
-    	height:300px;
+        height:300px;
     }
     .fo{
-    	width:900px;
-    	height:225px;
+        width:900px;
+        height:225px;
     }
 
     #fo1>p{
-    	
-    	float:left;
+        
+        float:left;
     }
     #fo11{
-    	width:400px;
-    	height:225px;
+        width:400px;
+        height:225px;
     }
     #fo12{
-    	width:405px;
-    	height:210px;
-    	background-color:rgb(180,180,180);
-    	border-radius:20%;
-    	font-family:楷体;
-    	font-size:18px;
-    	margin-left:40px;
+        width:405px;
+        height:225px;
+        background-color:rgb(180,180,180);
+        border:1px solid black;
+        font-family:楷体;
+        font-size:18px;
+        margin-left:40px;
     }
     #fo12>a{
-    	border-width:30px;
-    	margin-left:280px;
-    	font-size:24px;
+        border-width:30px;
+        margin-left:280px;
+        font-size:24px;
+        text-decoration:none;
     }
 
-    #fo2>p{
-    	
-    	float:left;
+    #fo2>p{     
+        float:left;
     }
     #fo21{
-    	width:400px;
-    	height:225px;
+        width:400px;
+        height:225px;
     }
     #fo22{
-    	width:405px;
-    	height:230px;
-    	background-color:rgb(180,180,180);
-    	border-radius:20%;
-    	font-family:楷体;
-    	font-size:18px;
-    	margin-left:40px;
+        width:405px;
+        height:225px;
+        background-color:rgb(180,180,180);
+        border:1px solid black;
+        font-family:楷体;
+        font-size:18px;
+        margin-left:40px;
     }
     #fo22>a{
-    	border-width:30px;
-    	margin-left:280px;
-    	font-size:24px;
+        border-width:30px;
+        margin-left:280px;
+        font-size:24px;
+        text-decoration:none;
     }
     #fo3>p{
-    	
-    	float:left;
+        
+        float:left;
     }
     #fo31{
-    	width:400px;
-    	height:225px;
+        width:400px;
+        height:225px;
     }
     #fo32{
-    	width:405px;
-    	height:210px;
-    	background-color:rgb(180,180,180);
-    	border-radius:20%;
-    	font-family:楷体;
-    	font-size:18px;
-    	margin-left:40px;   	
+        width:405px;
+        height:225px;
+        background-color:rgb(180,180,180);
+        border:1px solid black;
+        font-family:楷体;
+        font-size:18px;
+        margin-left:40px;       
     }
     #fo32>a{
-    	border-width:30px;
-    	margin-left:280px;
-    	font-size:24px;
+        border-width:30px;
+        margin-left:280px;
+        font-size:24px;
+        text-decoration:none;
     }
 /*================================*/
     .first>div{
-    	float:left;
+        float:left;
     }
     .xuan{
-    	margin-left:70px;
+        margin-left:70px;
     }
     .heart{
-    	color:red;
-    	font-size:80px;
+        color:red;
+        font-size:80px;
     }
     .luck{
-    	font-size:80px;
-    	font-weight:bolder;
-    	font-family:华文行楷;
+        font-size:80px;
+        font-weight:bolder;
+        font-family:楷体;
 
     }
 
 
     .last{
-    	margin-right:60px;
-    	margin-left:60px;
-    	padding-bottom:10px;
-    	margin-top:15px;
+        margin-right:60px;
+        margin-left:60px;
+        padding-bottom:10px;
+        margin-top:15px;
     }
     .last>p{
-    	font-family:华文行楷;
-    	font-size:25px;
+        font-family:华文行楷;
+        font-size:25px;
     }
 
     .mowei{
@@ -301,101 +299,101 @@
     }
     #biao{
         position: fixed;
-  		top: 400px;
- 		left: 1400px;
+        top: 400px;
+        left: 1460px;
     }
     </style>
 </head>
 <body>
-	<div id="all">
-		<div class="head">
-			<p id="wen">Games,for a better experience</p>
-			<p id="xin">♥</p>
-	    </div>
-	    <div class="shouye">          	
-	        <div id="s-er">
-	            <ul>
-		            <li id="s-er-one"><a href="https://xiaokuoaiyang.github.io/webbigwork/one.html">首页</a></li>
-		            <li class="s-er-two"><a href="https://xiaokuoaiyang.github.io/webbigwork/shows.html">影视</a></li>
-		            <li class="s-er-two"><a href="https://xiaokuoaiyang.github.io/webbigwork/homework.html">文学</a></li>
-		            <li class="s-er-two"><a href="https://xiaokuoaiyang.github.io/webbigwork/%E9%9F%B3%E4%B9%90.html">音乐</a></li>
-		            <li class="s-er-two"><a href="https://xiaokuoaiyang.github.io/webbigwork/two.html">游戏</a></li>
-	            </ul>
-	        </div>
+    <div id="all">
+        <div class="head">
+            <p id="wen">Games,for a better experience</p>
+            <p id="xin">♥</p>
+        </div>
+        <div class="shouye">            
+            <div id="s-er">
+                <ul>
+                    <li id="s-er-one">首页</li>
+                    <li class="s-er-two">影视</li>
+                    <li class="s-er-two">文学</li>
+                    <li class="s-er-two">音乐</li>
+                    <li class="s-er-two">游戏</li>
+                </ul>
+            </div>
         </div>
 
-		<div class="box" id="box">
-			<!-- 放置图片的盒子 -->
-			<div class="slider" id="slider">
-				<!-- 图片部分 -->
-				<div class="slide"><img src="images/13.png"></div>	
-				<div class="slide"><img src="images/11.jpg"></div>
-				<div class="slide"><img src="images/12.jpg"></div>
-				<div class="slide"><img src="images/13.png"></div>
-				<div class="slide"><img src="images/11.jpg"></div>
-			</div>
-			<!-- 左右部分 -->
-			<span id="left"><</span>
-			<span id="right">></span>
-			<!-- 底下圆圈部分 -->
-			<ul class="nav" id="nav">
-				<li class="active"></li>
-				<li></li>
-				<li></li>
-			</ul>
-	    </div>
+        <div class="box" id="box">
+            <!-- 放置图片的盒子 -->
+            <div class="slider" id="slider">
+                <!-- 图片部分 -->
+                <div class="slide"><img src="images/13.png"></div>  
+                <div class="slide"><img src="images/11.jpg"></div>
+                <div class="slide"><img src="images/12.jpg"></div>
+                <div class="slide"><img src="images/13.png"></div>
+                <div class="slide"><img src="images/11.jpg"></div>
+            </div>
+            <!-- 左右部分 -->
+            <span id="left"><</span>
+            <span id="right">></span>
+            <!-- 底下圆圈部分 -->
+            <ul class="nav" id="nav">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
 
-	    <div class="next">
-	    	<p class="one"><img src="images/shoubing.jpg"></p>
-	    </div>
+        <div class="next">
+            <p class="one" id="good"><img src="images/shoubing.jpg"></p>
+        </div>
 
-	    <div class="box1" id="box1">
-	    	<p class="box1-1">宝藏游戏之首推鸡汤</p>
-	    	<p class="box1-2">心情烦闷之时，看一部文艺的影片就能舒缓自己；心情忧郁之时，看一则励志故事就能重获热血；心情低落之时，听一首自在的音乐就能舒缓很多……生活中处处都可以找到疗伤治愈的“心灵鸡汤”。同样地，作为当下年轻人相当追捧地解压方式，游戏也蕴藏着许多我们不曾留意到的治愈哲学。接下来，就让我们走到游戏的世界，感受它的风采。</p>
-		    <div class="first" id="first">
-		    	<p>王者荣耀</p>
-		    	<div class="fo" id="fo1">
-		    		<p id="fo11"><img src="images/w5.jpg"></p>
-		    	    <p id="fo12">&nbsp&nbsp&nbsp&nbsp《王者荣耀》是腾讯第一5V5团队公平竞技手游，国民MOBA手游大作！5V5王者峡谷、公平对战、还原MOBA经典体验；契约之战、五军对决、边境突围等，带来花式的作战乐趣！10秒实时跨区匹配，与好友开黑上分，向最强王者进击！多款英雄任凭选择，一血、五杀、超神，实力碾压，收割全场！<br><br><br><br><a href="https://pvp.qq.com/">点击详情</a></p>	    
-		    	</div>
-		    	<div class="xuan">
-		    		<p class="heart" id="heart">♥</p>
-		    		<p class="luck" style="color:rgb(230,230,230);">欢迎入坑</p>
-		    	</div>
-		    </div>
-		    <div class="first" id="second">
-		    	<p>第五人格</p>
-		    	<div class="fo" id="fo2">
-		    		<p id="fo21"><img src="images/d2.jpg"></p>
-		    		<p id="fo22">&nbsp&nbsp&nbsp&nbsp《第五人格》是由网易开发的非对称性对抗竞技类游戏，游戏于2018年4月2日开启公测。在进行证据调查过程中，玩家扮演的奥尔菲斯将采用演绎法，对案情进行回顾。在案情回顾时，玩家可以选择扮演监管者或求生者，展开激烈的对抗。而在调查的过程，无限接近事实时，却发现越来越不可思议的真相。荒诞哥特画风，悬疑烧脑剧情，刺激的1V4“猫鼠追逃游戏”的对抗玩法，都将给玩家带来全新的游戏体验。<br><br><a href="http://id5.163.com/fab/">点击详情</a></p>
-		    	</div>
-		    	<div class="xuan">
-		    		<p class="heart" id="heart1">♥</p>
-		    		<p class="luck" style="color:rgb(230,230,230);">欢迎入坑</p>
-		    	</div>
-		    </div>
-		    <div class="first" id="third">
-		        <p>绝地求生</p>		    	
-		    	<div class="fo" id="fo3">
-		    		<p id="fo31"><img src="images/j1.jpg"></p>
-		    		<p id="fo32">&nbsp&nbsp&nbsp&nbsp《绝地求生》是一款战术竞技游戏。《绝地求生》(PUBG)是由蓝洞开发的一款战术竞技型射击类沙盒游戏。在该游戏中，玩家需要在游戏地图上收集各种资源，并在不断缩小的安全区域内对抗其他玩家，让自己生存到最后。游戏《绝地求生》除获得G-STAR最高奖项总统奖以及其他五项大奖，还打破了7项吉尼斯纪录。<br><br><br><a href="https://pubg.qq.com/">点击详情</a></p>
-		    	</div>
-		    	<div class="xuan">
-		    		<p class="heart" id="heart2">♥</p>
-		    		<p class="luck" style="color:rgb(230,230,230);">欢迎入坑</p>
-		    	</div>
-		    </div>
-		</div>
+        <div class="box1" id="box1">
+            <p class="box1-1">宝藏游戏 首推</p>
+            <p class="box1-2">心情烦闷之时，看一部文艺的影片就能舒缓自己；心情忧郁之时，看一则励志故事就能重获热血；心情低落之时，听一首自在的音乐就能舒缓很多……生活中处处都可以找到疗伤治愈的“心灵鸡汤”。同样地，作为当下年轻人相当追捧地解压方式，游戏也蕴藏着许多我们不曾留意到的治愈哲学。接下来，就让我们走到游戏的世界，感受它的风采。</p>
+            <div class="first" id="first">
+                <p>王者荣耀</p>
+                <div class="fo" id="fo1">
+                    <p id="fo11"><img src="images/w5.jpg"></p>
+                    <p id="fo12">&nbsp&nbsp&nbsp&nbsp《王者荣耀》是腾讯第一5V5团队公平竞技手游，国民MOBA手游大作！5V5王者峡谷、公平对战、还原MOBA经典体验；契约之战、五军对决、边境突围等，带来花式的作战乐趣！10秒实时跨区匹配，与好友开黑上分，向最强王者进击！多款英雄任凭选择，一血、五杀、超神，实力碾压，收割全场！<br><br><br><br><a href="https://pvp.qq.com/">点击详情</a></p>       
+                </div>
+                <div class="xuan">
+                    <p class="heart" id="heart">♥</p>
+                    <p class="luck" style="color:rgb(230,230,230);">欢迎入坑</p>
+                </div>
+            </div>
+            <div class="first" id="second">
+                <p>第五人格</p>
+                <div class="fo" id="fo2">
+                    <p id="fo21"><img src="images/d2.jpg"></p>
+                    <p id="fo22">&nbsp&nbsp&nbsp&nbsp《第五人格》是由网易开发的非对称性对抗竞技类游戏，游戏于2018年4月2日开启公测。在进行证据调查过程中，玩家扮演的奥尔菲斯将采用演绎法，对案情进行回顾。在案情回顾时，玩家可以选择扮演监管者或求生者，展开激烈的对抗。而在调查的过程，无限接近事实时，却发现越来越不可思议的真相。荒诞哥特画风，悬疑烧脑剧情，刺激的1V4“猫鼠追逃游戏”的对抗玩法，都将给玩家带来全新的游戏体验。<br><br><a href="http://id5.163.com/fab/">点击详情</a></p>
+                </div>
+                <div class="xuan">
+                    <p class="heart" id="heart1">♥</p>
+                    <p class="luck" style="color:rgb(230,230,230);">欢迎入坑</p>
+                </div>
+            </div>
+            <div class="first" id="third">
+                <p>绝地求生</p>             
+                <div class="fo" id="fo3">
+                    <p id="fo31"><img src="images/j1.jpg"></p>
+                    <p id="fo32">&nbsp&nbsp&nbsp&nbsp《绝地求生》是一款战术竞技游戏。《绝地求生》(PUBG)是由蓝洞开发的一款战术竞技型射击类沙盒游戏。在该游戏中，玩家需要在游戏地图上收集各种资源，并在不断缩小的安全区域内对抗其他玩家，让自己生存到最后。游戏《绝地求生》除获得G-STAR最高奖项总统奖以及其他五项大奖，还打破了7项吉尼斯纪录。<br><br><br><a href="https://pubg.qq.com/">点击详情</a></p>
+                </div>
+                <div class="xuan">
+                    <p class="heart" id="heart2">♥</p>
+                    <p class="luck" style="color:rgb(230,230,230);">欢迎入坑</p>
+                </div>
+            </div>
+        </div>
 
-		<div class="last">
-			<p>找寻中意的游戏，只为遇见更好的自己。推荐还在继续……</p>
-		</div>		
+        <div class="last">
+            <p>找寻中意的游戏，只为遇见更好的自己。推荐还在继续……</p>
+        </div>      
     </div>
     <div id = "biao">
-    	<div>
-	    	<a href="#"><img src = "images/向上.png"></a>
-		</div>
-	</div>
+        <div>
+            <a href="#"><img src = "images/向上.png"></a>
+        </div>
+    </div>
     <div class="mowei">
         <div class="mowei-yi">
             <p id="a-yi">首页&nbsp;&nbsp;|&nbsp;&nbsp;推予 互动娱乐&nbsp;&nbsp;|&nbsp;&nbsp;隐私保护指引&nbsp;&nbsp;|&nbsp;&nbsp;广告服务及商务合作&nbsp;&nbsp;|&nbsp;&nbsp;专业客服&nbsp;&nbsp;|&nbsp;&nbsp;服务条款&nbsp;&nbsp;|&nbsp;&nbsp;法律服务</p>
@@ -406,128 +404,128 @@
 <script>
 
 //---------------------------------------------------
-	var box = document.getElementById("box");
-	var oNavlist = document.getElementById("nav").children;
-	var slider = document.getElementById("slider");
-	var left = document.getElementById("left");
-	var right = document.getElementById("right");
+    var box = document.getElementById("box");
+    var oNavlist = document.getElementById("nav").children;
+    var slider = document.getElementById("slider");
+    var left = document.getElementById("left");
+    var right = document.getElementById("right");
 
-	// var box1 = document.getElementById("box1");
-	var first = document.getElementById("first");
+    // var box1 = document.getElementById("box1");
+    var first = document.getElementById("first");
 
-	// var box2 = document.getElementById("box2");
-	var second = document.getElementById("second");
-	// var box3 = document.getElementById("box3");
-	var third = document.getElementById("third");
-	var index = 1;
-	var isMoving = false;
-	var timer;
+    // var box2 = document.getElementById("box2");
+    var second = document.getElementById("second");
+    // var box3 = document.getElementById("box3");
+    var third = document.getElementById("third");
+    var index = 1;
+    var isMoving = false;
+    var timer;
 
-	//animate的函数第一个传的是对象，第二个是那些样式变，第三个是回调函数
-	//轮播下一张函数
-	function next(){
-		if(isMoving){
-			return;
-		}
-		isMoving = true;
-		index++;
-		navmove();
-		animate(slider,{left:-1200*index},function(){
-			if(index === 4){
-				slider.style.left = "-1200px";
-				index = 1;
-			}
-			isMoving = false;
-		});
-	}
-	//上一张
-	function prev(){
-		if(isMoving){
-			return;
-		}
-		isMoving = true;
-		index--;
-		navmove();
-		animate(slider,{left:-1200*index},function(){
-			if(index === 0){
-				slider.style.left = "-3600 px";
-				index = 3;
-			}
-			isMoving = false;
-		});
-	}
-	//小按钮背景颜色变化函数
-	function navmove(){
-		for(var i = 0;i<oNavlist.length;i++){
-			oNavlist[i].className="";
-		}
-		if(index>3){
-			oNavlist[0].className="active";
-		}else if(index<1){
-			oNavlist[2].className="active";
-		}else{
-			oNavlist[index-1].className="active";
-		}
-	}
-	//鼠标划入清除定时器
-	box.onmouseover = function(){
-		animate(left,{opacity:50})
-		animate(right,{opacity:50})
-		clearInterval(timer);
-	}
-	//鼠标划出开始定时器
-	box.onmouseout = function(){
-		animate(left,{opacity:0})
-		animate(right,{opacity:0})
-		timer = setInterval(next,3000);
-	}
+    //animate的函数第一个传的是对象，第二个是那些样式变，第三个是回调函数
+    //轮播下一张函数
+    function next(){
+        if(isMoving){
+            return;
+        }
+        isMoving = true;
+        index++;
+        navmove();
+        animate(slider,{left:-1200*index},function(){
+            if(index === 4){
+                slider.style.left = "-1200px";
+                index = 1;
+            }
+            isMoving = false;
+        });
+    }
+    //上一张
+    function prev(){
+        if(isMoving){
+            return;
+        }
+        isMoving = true;
+        index--;
+        navmove();
+        animate(slider,{left:-1200*index},function(){
+            if(index === 0){
+                slider.style.left = "-3600 px";
+                index = 3;
+            }
+            isMoving = false;
+        });
+    }
+    //小按钮背景颜色变化函数
+    function navmove(){
+        for(var i = 0;i<oNavlist.length;i++){
+            oNavlist[i].className="";
+        }
+        if(index>3){
+            oNavlist[0].className="active";
+        }else if(index<1){
+            oNavlist[2].className="active";
+        }else{
+            oNavlist[index-1].className="active";
+        }
+    }
+    //鼠标划入清除定时器
+    box.onmouseover = function(){
+        animate(left,{opacity:50})
+        animate(right,{opacity:50})
+        clearInterval(timer);
+    }
+    //鼠标划出开始定时器
+    box.onmouseout = function(){
+        animate(left,{opacity:0})
+        animate(right,{opacity:0})
+        timer = setInterval(next,3000);
+    }
 
-	right.onclick = next;
-	left.onclick = prev;
+    right.onclick = next;
+    left.onclick = prev;
     //小按钮点击事件
-	for (var i = 0; i <oNavlist.length; i++) {
-		oNavlist[i].index = i;
-		oNavlist[i].onclick = function(){
-			index = this.index+1;
-			navmove();
-			animate(slider,{left:-1200*index});
-		}
-	}
-	//轮播下一张函数
-	function next1(){
-		if(isMoving){
-			return;
-		}
-		isMoving = true;
-		index1++;		
-		animate(first,{left:-400*index1},function(){
-			if(index1 === 6){
-				first.style.left = "-400px";
-				index1 = 1;
-			}
-			isMoving = false;
-		});
-	}
+    for (var i = 0; i <oNavlist.length; i++) {
+        oNavlist[i].index = i;
+        oNavlist[i].onclick = function(){
+            index = this.index+1;
+            navmove();
+            animate(slider,{left:-1200*index});
+        }
+    }
+    //轮播下一张函数
+    function next1(){
+        if(isMoving){
+            return;
+        }
+        isMoving = true;
+        index1++;       
+        animate(first,{left:-400*index1},function(){
+            if(index1 === 6){
+                first.style.left = "-400px";
+                index1 = 1;
+            }
+            isMoving = false;
+        });
+    }
 
-	timer = setInterval(next,3000);
-	
-	var heart=document.getElementById("heart");
-	var heart1=document.getElementById("heart1");
-	var heart2=document.getElementById("heart2");
-	var luck = document.getElementsByClassName("luck")[0];
-	var luck1 = document.getElementsByClassName("luck")[1];
-	var luck2 = document.getElementsByClassName("luck")[2];
-	heart.onclick = function(){
-		luck.style.color = "rgb(190,180,200)";
-	}
+    timer = setInterval(next,3000);
+    
+    var heart=document.getElementById("heart");
+    var heart1=document.getElementById("heart1");
+    var heart2=document.getElementById("heart2");
+    var luck = document.getElementsByClassName("luck")[0];
+    var luck1 = document.getElementsByClassName("luck")[1];
+    var luck2 = document.getElementsByClassName("luck")[2];
+    var flag = false;
+    heart.onclick = function(){
+        luck.style.color = "rgb(190,180,200)";
+    }   
+    heart1.onclick = function(){
+        luck1.style.color = "rgb(190,150,200)";
+    }
 
-	heart1.onclick = function(){
-		luck1.style.color = "rgb(190,150,200)";
-	}
-
-	heart2.onclick = function(){
-		luck2.style.color = "rgb(190,120,200)";
-	}
+    heart2.onclick = function(){
+        luck2.style.color = "rgb(190,120,200)";
+    }
 
 </script>
 </html>
