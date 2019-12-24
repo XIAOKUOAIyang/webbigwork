@@ -163,7 +163,7 @@ ul,li{
 	font:35px 华文行楷;
 }
 #t{
-	margin-left:200px;
+	margin-left:100px;
 	width:1000px;
 	float:left;
 }
@@ -213,7 +213,7 @@ ul,li{
 	clear:both;
 	position:relative;
 	top:30px;
-	margin-left:250px;
+	margin-left:150px;
 }
 .ge{
 	margin:30px 40px;
@@ -252,5 +252,5 @@ ul,li{
 #biao{
 	position: fixed;
 	top: 550px;
-	left: 1600px;
+	left: 1400px;
 }
