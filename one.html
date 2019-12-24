@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>推与</title>
+	<script type="text/javascript"></script>
+	<style>
+	*{
+		margin:0;     
+        padding:0;
+
+	}
+	.all{
+		margin:0 auto;
+		width:1505px;
+		height:753px;
+		background-color:black;
+		background-image:url(images/111.jpg);
+		background-repeat:no-repeat;
+		background-size: 88% 105%;
+		overflow:hidden;
+	}
+	.all>div{
+		float:left;
+	}
+	.kuang{
+		margin:0 auto;
+		width:750px;
+	}
+	.kuangzong{
+		width:600px;
+		height:600px;
+		background-color:rgb(230,239,230);
+		opacity:0.6;
+		margin:70px 60px;
+		border-radius:20px;
+	}
+	.kuangzong>p{
+		width:30px;
+		height:60px;
+		font-family:华文行楷;
+		font-size:40px;
+		margin-left:10px;
+	}
+	.one{
+		float:left;
+		width:200px;
+		height:90px;
+		border:5px inset rgb(210,210,210);
+		border-radius:20px;
+		margin-left:70px;
+		margin-top:50px;
+	}
+	.kuangzong>div>a{
+		display:inline-block;
+		border:1px solid black;
+		margin:35px 80px;
+		color:black;
+		font-size:40px;
+		font-family:华文行楷;
+	}
+	#shouwen{
+		margin-top:100px;
+		width:390px;
+		font-size:40px;
+		font-family:华文行楷;
+		text-align:center;
+		/*color:rgb(200,200,200);*/
+		border:5px inset rgb(210,210,210);
+		border-radius:30px;
+	}
+	.gundong{
+		margin:0 auto;
+		width:750px;
+		opacity:0.9;
+	}
+	.jv1{
+		opacity:0;
+		margin-top:98px;
+		border-radius:50px;
+	}
+	.jv2{
+		margin-top:70px;
+		padding-left:355px;
+		opacity:0.7;
+	}
+	
+    </style>
+</head>
+<body>
+	<div class="all">
+		<div class="kuang">
+			<div class="kuangzong">
+				<p>推予</p>
+				<div class="one"><a href="http://baidu.com">影视</a></div>
+				<div class="one"><a href="">文学</a></div>
+				<div class="one"><a href="">音乐</a></div>
+				<div class="one"><a href="">游戏</a></div>
+				<marquee behavior="scroll" direction="left">
+					 <p id="shouwen">It's all for the better</p>
+				</marquee>				
+			</div>
+		</div>
+		<div class="gundong">
+			<div class="jv1" id="jv1"><img src="images/1111.jpg"></div>
+			<div class="jv2"><img src="images/11111.jpg"></div>
+		</div>
+
+
+	</div>
+	
+</body>
+<script type="text/javascript">
+	var jv1=document.getElementById("jv1");
+	jv1.onmouseover=function(){
+		jv1.style.opacity = "0.7";
+	}
+	jv1.onmouseout = function(){
+		jv1.style.opacity = "0";
+	}
+
+</script>
+</html>
