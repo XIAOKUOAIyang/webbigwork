@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文学圣地</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			font-family:华文行楷;
+		}
+		.shouye{
+    	margin:0 auto;
+    	margin-top:10px; 
+	    }
+	    #s-er{
+	    	margin-left:30px;
+	    }	          
+	    #s-er>ul>li{
+	        width:70px;
+	        margin-top:4px;
+	        display:inline-block;
+	        list-style-type:none;
+	        text-align:center;
+	    }
+	    #s-er>ul>li>a{
+	        text-decoration:none;
+	        color:#778a99;
+	        font-size:17px;
+	        text-align:center;
+	    }
+	    .s-er-two{
+	        margin-left:95px;
+	    }
+	    #s-er-one{
+	        margin-left:17px;
+	    }
+	    #s-er>ul>li:hover{
+	        color:black;
+	        padding-bottom:8px;
+	        border-bottom:5px solid purple;
+	    }
+		#head{
+			margin:0 auto;
+			height:50px;
+		}
+		#title{
+			height:50px;
+			display:inline-block;
+			margin-left:140px;
+			margin-bottom:10px;
+		}
+		#sen{
+			color:purple;
+			font-size:50px;
+			display:inline-block;
+			margin-right:200px;
+			margin-bottom:10px;
+		}
+		#search{
+			display:inline-block;
+			margin-bottom:10px;
+		}
+		.sea{
+			width:400px;
+			height:30px;
+			border:3px solid purple;
+			border-top-left-radius:10px;
+	    	border-top-right-radius:10px;			
+	    	border-bottom-left-radius:10px;
+			border-bottom-right-radius:10px;
+		}
+		.btn{
+			width:100px;
+			height:35px;
+			border:3px solid purple;
+			border-top-left-radius:10px;
+	    	border-top-right-radius:10px;			
+	    	border-bottom-left-radius:10px;
+			border-bottom-right-radius:10px;
+		}
+		#square{
+			width:900px;
+			height:25px;
+			margin-left:240px;
+			margin-top:10px;
+			overflow:hidden;
+			text-align:center;
+		}
+		.word{
+			color:purple;
+			font-size:15px;
+			text-align:center;
+			position:relative;
+			left:800px;
+		}
+		#lead{
+			margin-top:40px;
+			font-size:12px;
+			margin-left:-30px;
+		}
+		#lead>ul>li{
+			display:inline-block;
+		}
+		#lead>ul>li>a{
+			text-decoration:none;
+			color:#585858;
+		}
+		#lead>ul>li>a:hover{
+			color:purple;
+			padding-bottom:5px;
+			border-bottom:3px solid purple;
+		}
+		#sel{
+			height:2em;
+			border:2px solid purple;
+			border-top-left-radius:10px;
+	    	border-top-right-radius:10px;			
+	    	border-bottom-left-radius:10px;
+			border-bottom-right-radius:10px
+		}
+		ul,li{
+			list-style:none;
+			text-align:center;
+		}
+		.box{
+			display:inline-block;
+			width:350px;
+			height:580px;
+			border:1px solid purple;
+			margin-top:20px;
+			margin-left:80px;
+			position:relative;
+			overflow:hidden;
+		}
+		.slider{
+			width:2450px;
+			position:absolute;
+			left:-350px;
+		}
+		.slide{
+			width:350px;
+			overflow:hidden;
+			float:left;
+		}
+		.box>span{
+			display:block;
+			width:30px;
+			height:50px;
+			text-align:center;
+			cursor:pointer;
+			color:#fff;
+			top:175px;
+			line-height:50px;
+			background:#f00;
+			font-size:30px;
+			position:absolute;
+			opacity:0;
+		}
+		#left{
+			left:3px;
+			background-color:purple;
+		}
+		#right{
+			right:3px;
+			background-color:purple;
+		}
+		.slide>p{
+			padding-top:10px;
+			height:24px;
+			text-align:center;
+			line-height:10px;
+			font-size:20px;
+		}
+		.nav{
+			position:absolute;
+			left:80px;
+			bottom:10px;
+		}
+		.nav>li{
+			float:left;
+			width:20px;
+			height:20px;
+			background:#ccc;
+			cursor:pointer;
+			margin:0 10px;
+			border-radius:50%;
+			color:purple;
+		}
+		.nav .active{
+			background:purple;
+			color:#fff;
+		}
+		#list{
+			width:660px;
+			height:580px;
+			border:1px solid purple;
+			float:right;
+			margin-right:100px;
+			margin-top:20px;
+		}
+		.aone{
+			width:329.5px;
+			height:115px;
+			border-right:1px solid purple;
+			border-bottom:1px solid purple;
+			float:left;
+			display:inline-block;
+		}
+		.aone>img{
+			width:100px;
+			height:115px;
+		}
+		.p1{
+			width:200px;
+			height:115px;
+			text-align:center;
+			display:inline-block;
+			overflow:auto;
+		}
+		.atwo{
+			width:329.5px;
+			height:115px;
+			border-bottom:1px solid purple;
+			float:left;
+			display:inline-block;
+		}
+		.atwo>img{
+			width:100px;
+			height:115px;
+		}
+		.athr{
+			width:329.5px;
+			height:115px;
+			border-right:1px solid purple;
+			border-bottom:1px solid purple;
+			float:left;
+			display:inline-block;
+		}
+		.athr>img{
+			width:100px;
+			height:115px;
+		}
+		.afou{
+			width:329.5px;
+			height:115px;
+			border-bottom:1px solid purple;
+			float:left;
+			display:inline-block;
+		}
+		.afou>img{
+			width:100px;
+			height:115px;
+		}
+		.afiv{
+			width:329.5px;
+			height:115px;
+			border-right:1px solid purple;
+			border-bottom:1px solid purple;
+			float:left;
+			display:inline-block;		
+		}
+		.afiv>img{
+			width:100px;
+			height:115px;
+		}
+		.asix{
+			width:329.5px;
+			height:115px;
+			border-bottom:1px solid purple;
+			float:left;
+			display:inline-block;
+		}
+		.asix>img{
+			width:100px;
+			height:115px;
+		}
+		.asev{
+			width:329.5px;
+			height:115px;
+			border-right:1px solid purple;
+			border-bottom:1px solid purple;
+			float:left;
+			display:inline-block;
+		}
+		.asev>img{
+			width:100px;
+			height:115px;
+		}
+		.aeig{
+			width:329.5px;
+			height:115px;
+			border-bottom:1px solid purple;
+			float:left;
+			display:inline-block;
+		}
+		.aeig>img{
+			width:100px;
+			height:115px;
+		}
+		.anin{
+			width:329.5px;
+			height:115px;
+			border-right:1px solid purple;
+			float:left;
+			display:inline-block;
+		}
+		.anin>img{
+			width:100px;
+			height:115px;
+		}
+		.aten{
+			width:329.5px;
+			height:115px;
+			float:left;
+			display:inline-block;
+		}
+		.aten>img{
+			width:100px;
+			height:115px;
+		}
+		#body{
+			width:1170px;
+			margin-left:90px;
+			margin-top:30px;
+			display:inline-block;
+		}
+		#fir{
+			display:inline-block;
+			width:220px;
+			height:240px;
+			margin-bottom:35px;			
+			margin-right:60px;
+			border:1px solid #878787;
+			background-image:url(images/a1.jpg);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:center;
+			color:#ffffff;
+			
+		}
+		#sec{
+			display:inline-block;
+			width:220px;
+			height:240px;
+			margin-right:60px;
+			margin-bottom:35px;
+			border:1px solid #878787;
+			background-image:url(images/a2.jpg);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:center;
+			color:#ffffff;
+			
+		}
+		#thi{
+			display:inline-block;
+			width:220px;
+			height:240px;
+			margin-right:60px;
+			margin-bottom:35px;
+			border:1px solid #878787;
+			background-image:url(images/a3.jpg);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:center;
+			color:#ffffff;
+			
+		}
+		#fou{
+			display:inline-block;
+			width:220px;
+			height:240px;
+			margin-right:60px;
+			margin-bottom:35px;
+			border:1px solid #878787;
+			background-image:url(images/a4.jpg);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:center;
+			color:#ffffff;
+			
+		}
+		#fif{
+			display:inline-block;
+			width:220px;
+			height:240px;
+			margin-right:60px;
+			margin-bottom:35px;
+			border:1px solid #878787;
+			background-image:url(images/a5.jpg);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:center;
+			color:#ffffff;
+			
+		}
+		#six{
+			display:inline-block;
+			width:220px;
+			height:240px;
+			margin-right:60px;
+			margin-bottom:35px;
+			border:1px solid #878787;
+			background-image:url(images/a6.jpg);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:center;
+			color:#ffffff;
+			
+		}
+		#sev{
+			display:inline-block;
+			width:220px;
+			height:240px;
+			margin-right:60px;
+			margin-bottom:35px;
+			border:1px solid #878787;
+			background-image:url(images/a7.jpg);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:center;
+			color:#ffffff;
+			
+		}
+		#eig{
+			display:inline-block;
+			width:220px;
+			height:240px;
+			margin-right:60px;
+			margin-bottom:35px;
+			border:1px solid #878787;
+			background-image:url(images/a8.jpg);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:center;
+			color:#ffffff;
+			
+		}
+		.back11{
+			width:220px;
+			height:191px;
+			font-size:16px;
+			background:purple;
+			opacity:0.7;
+			position:absolute;
+			top:786px;
+			padding-top:50px;
+		}
+		.back11{
+			display:none;
+		}
+		.fir:hover .back11{
+			display:block;
+		}
+		.back11>ul>li{
+			margin-left:-6px;
+			display:inline-block;
+			text-align:center;
+		}
+		.back11>p{
+			text-align:center;
+		}
+		.xiahuaxian{
+			padding-bottom:10px;
+			margin-bottom:10px;
+			border-bottom:4px solid red;
+		}
+		.back1{
+			width:220px;
+			height:35px;
+			background-color:purple;;
+			font-size:12px;
+			opacity:0.5;
+			color:#ffffff;
+			position:absolute;
+			top:988px;
+			text-align:center;
+			padding-top:5px;
+		}
+		.fir:hover .back1{
+			display:none;
+		}
+		.back55{
+			width:220px;
+			height:191px;
+			font-size:16px;
+			opacity:0.7;
+			position:absolute;
+			top:1068px;
+			padding-top:50px;
+		}
+		.back55{
+			display:none;
+		}
+		.fif:hover .back55{
+			display:block;
+			background:purple;
+		}
+		.back55>ul>li{
+			margin-left:-6px;
+			display:inline-block;
+			text-align:center;
+			background:purple;
+		}
+		.back55>p{
+			text-align:center;
+			background:purple;
+		}
+		.dec{
+			padding-bottom:10px;
+		}
+		.back5{
+			width:220px;
+			height:35px;
+			background-color:purple;
+			font-size:12px;
+			opacity:0.5;
+			color:#ffffff;
+			position:absolute;
+			top:1270px;
+			text-align:center;
+			padding-top:5px;
+		}
+		.fif:hover .back5{
+			display:none;
+		}
+		.last{
+			margin-top:10px;
+			margin-bottom:4px; 
+			padding-left:5px;
+			padding-right:5px
+			height:50px;
+			color:purple;
+			border-top:8px double purple;
+			border-bottom:8px double purple;
+			line-height:25px;
+		}
+		.mowei{
+            height:100px;
+            background-color:#323232;
+            border:2px solid #1c1c1c;
+        }
+        .mowei-yi{
+        	background-color:#323232;
+            width:1200px;
+            margin:0 auto;
+        }
+        .mowei-yi>p{
+        	background-color:#323232;
+            color:white;
+            font-size:14px;
+            text-align:center;
+        }
+        #a-yi{
+            margin-top:28px;
+        }
+        #a-er{
+            margin-top:15px;
+        }
+        #biao{
+        	position:fixed;
+  			top:500px;
+ 		   	right:10px;
+        }
+	</style>
+</head>
+<body>
+	<div class="shouye">          	
+	    <div id="s-er">
+	        <ul>
+		        <li id="s-er-one"><a href="https://xiaokuoaiyang.github.io/webbigwork/one.html">首页</a>
+		        <li class="s-er-two"><a href="https://xiaokuoaiyang.github.io/webbigwork/shows.html">影视</a>
+		        <li class="s-er-two"><a href="https://xiaokuoaiyang.github.io/webbigwork/homework.html">文学</a>
+		        <li class="s-er-two"><a href="https://xiaokuoaiyang.github.io/webbigwork/%E9%9F%B3%E4%B9%90.html">音乐</a>
+		        <li class="s-er-two"><a href="https://xiaokuoaiyang.github.io/webbigwork/two.html">游戏</a>
+	        </ul>
+	    </div>
+    </div>
+	<div id="head">
+		<div id="title">
+			<div id="sen">推予&nbsp;&nbsp;&nbsp;&nbsp;❤</div>
+			<div id="search">
+				<input class="sea" type="text" value="请输入要搜索的内容">
+				<input class="btn" type="button" value="搜索">
+			</div>
+		</div>
+		<div id="square">
+			<div id="word" class="word"> [休闲小公告] 欢迎大家欣赏本网站全新推出的最受欢迎的文学作品。</div>
+		</div>
+	</div>
+	<div id="lead">
+		<ul>
+			<li style="padding-right:30px">
+				<select id="sel" style="font-size:12px ">
+					<option style="color:#000000;">全部文学分类</option>
+					<option value = "one">经典名著</option>           
+					<option value = "two">散文及诗</option>           
+					<option value = "three">戏剧作品</option> 
+					<option value = "four">未来科幻</option> 
+					<option value = "five">当代言情</option> 
+					<option value = "six">神话仙侠</option>     
+					<option value = "seven">悬疑恐怖</option> 
+				</select>
+			</li>
+			<li style="padding-right:40px"><a class="chao" href="#">&nbsp;&nbsp;&nbsp;古代名著&nbsp;&nbsp;&nbsp;</a></li>
+			<li style="padding-right:40px"><a class="chao" href="#">&nbsp;&nbsp;&nbsp;散文及诗&nbsp;&nbsp;&nbsp;</a></li>
+			<li style="padding-right:40px"><a class="chao" href="#">&nbsp;&nbsp;&nbsp;戏剧作品&nbsp;&nbsp;&nbsp;</a></li>
+			<li style="padding-right:40px"><a class="chao" href="#">&nbsp;&nbsp;&nbsp;未来科幻&nbsp;&nbsp;&nbsp;</a></li>
+			<li style="padding-right:40px"><a class="chao" href="#">&nbsp;&nbsp;&nbsp;当代言情&nbsp;&nbsp;&nbsp;</a></li>
+			<li style="padding-right:40px"><a class="chao" href="#">&nbsp;&nbsp;&nbsp;神话仙侠&nbsp;&nbsp;&nbsp;</a></li>
+			<li style="padding-right:40px"><a class="chao" href="#">&nbsp;&nbsp;&nbsp;悬疑恐怖&nbsp;&nbsp;&nbsp;</a></li>
+		</ul>
+	</div>
+	<div id="box" class="box">
+		<div id="slider" class="slider">
+			<div class="slide"><img src="images/b5.jpg"/><p>言情小说首推：南山下的传说</p></div>
+			<div class="slide"><img src="images/b1.jpg"/><p>科幻小说首推：大宇宙时代<p></div>
+			<div class="slide"><img src="images/b2.jpg"/><p>仙侠小说首推：青玄道主</p></div>
+			<div class="slide"><img src="images/b3.jpg"/><p>名著小说首推：穆斯林的葬礼</p></div>
+			<div class="slide"><img src="images/b4.jpg"/><p>悬疑小说首推：盗墓笔记</p></div>
+			<div class="slide"><img src="images/b5.jpg"/><p>言情小说首推：南山下的传说</p></div>
+			<div class="slide"><img src="images/b1.jpg"/><p>科幻小说首推：大宇宙时代</p></div>
+		</div>
+		<span id="left"><</span>
+		<span id="right">></span>
+		<ul id="nav" class="nav">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div> 	
+	<div id="list">
+			<div class="aone">
+				<img src="images/c1.jpg"/>
+				<p class="p1">
+					天才在左疯子在右
+					<br/>高铭
+					<br/>该书以访谈录的形式记载了生活在另一个角落的人群（精神病患者、心理障碍者等边缘人）深刻、视角独特的所思所想，让人们可以了解到疯子亦或是天才真正的内心世界。
+				</p>
+			</div>
+			<div class="atwo">
+				<img src="images/c2.jpg"/>
+				<p class="p1">
+					送你一座不孤城
+					<br/>师小札
+					<br/>爱情是一个人懂得另一个人，爱情是细水长流，爱情是一个人包容另外一个人。
+				</p>
+			</div>
+			<div class="athr">
+				<img src="images/c3.jpg"/>
+				<p class="p1">
+					白夜行
+					<br/>东野圭谷
+					<br/>了生存、为了“安全感”，金钱成为凌驾于亲情、友情、爱情等人与人之间最宝贵情感之上的东西，人性在金钱的追逐中迷失，个人本位主义、社会无罪感等大行其道。
+				</p>
+			</div>
+			<div class="afou">
+				<img src="images/c4.jpg"/>
+				<p class="p1">
+					偷影子的人
+					<br/>马克·李维
+					<br/>催人泪下的亲情、浪漫感人的爱情和不离不弃的友情，清新浪漫的气息和温柔感人的故事相互交织，带给读者笑中带泪的阅读感受，是一部唤醒童年回忆和内心梦想的温情疗愈小说。
+				</p>
+			</div>
+			<div class="afiv">
+				<img src="images/c5.jpg"/>
+				<p class="p1">
+					武动乾坤
+					<br/>天蚕土豆
+					<br/>大炎王朝天都郡炎城青阳镇，落魄的林氏子弟林动在山洞间偶然捡到一块神秘的石符而走上的逆袭之路。
+				</p>
+			</div>
+			<div class="asix">
+				<img src="images/c6.jpg"/>
+				<p class="p1">
+					斗破苍穹
+					<br/>天蚕土豆
+					<br/>少年萧炎在创造了家族修炼纪录后却接受了种种打击，在经过药老的悉心教导后，联手萧薰儿共同战胜强敌的故事。
+				</p>
+			</div>
+			<div class="asev">
+				<img src="images/c7.jpg"/>
+				<p class="p1">
+					没有梦想何必远方
+					<br/>易术
+					<br/>易术在长达十年的梦想旅程中的经历，但他依然秉持一颗赤子之心，以一种倔强、温暖的方式解读生活。
+				</p>
+			</div>
+			<div class="aeig">
+				<img src="images/c8.jpg"/>
+				<p class="p1">
+					魔道祖师
+					<br/>墨香铜臭
+					<br/>我见诸君多有病，料诸君见我应如是。但修鬼道不修仙，任你千军万马，十方恶霸，九州奇侠，高岭之花，但凡化为一抔黄土，统统收归旗下，为我所用，供我驱策！
+				</p>
+			</div>
+			<div class="anin">
+				<img src="images/c9.jpg"/>
+				<p class="p1">
+					当这个世界多了一个你
+					<br/>胡一毕
+					<br/>小娃娃的视角呈现孩子认为的小小世界。小娃娃有笑有泪的小故事，令所有人回想起童年的稚气和天真。
+				</p>
+			</div>
+			<div class="aten">
+				<img src="images/c10.jpg"/>
+				<p class="p1">
+					狼世界
+					<br/>沈石溪
+					<br/>丛林经验极为丰富的作家犹如一位老练的猎人，穿越尕玛尔草原，来到日曲卡雪山雪线，遭遇了一个“双体狼”的奇迹；
+				</p>
+			</div>
+	</div>
+	<div id="body">
+		<div id="fir" class="fir">
+			<p class="back1">樱花璀璨<br/>社会现实</p>
+			<div class="back11">
+				<p class="dec">作者：丁强</p>
+				<p>两位上海女青年在二十一世纪初赴日留学有着与众不同的目的，经历了太多的艰辛和痛苦，以及在爱情、婚姻上的挫折……</p>
+			</div>
+		</div>
+		<div id="sec" class="fir">
+			<p class="back1">花开半世<br/>当代言情</p>
+			<div class="back11">
+				<p class="dec">作者：九夜茴</p>
+				<p>世间最执著的爱恋，是用最纯粹的心去爱一个人，用尽生命的全部力气去承受。一生里如果有一次这样爱过，就算爱如夏花，只开半夏，也无怨无悔...</p>
+			</div>
+		</div>
+		<div id="thi" class="fir">
+			<p class="back1">花落几何<br/>当代言情</p>
+			<div class="back11">
+				<p class="dec">作者：文伴刀</p>
+				<p>冬月夜,保护誓言,一生一世，你可还记得?出宫路,诛杀妖魔,芳心暗许，你可知道?是少年时发誓要保护自己一生一世的谦谦少年郎……</p>
+			</div>
+		</div>
+		<div id="fou" class="fir">
+			<p class="back1">神雕侠侣<br/>神话仙侠</p>
+			<div class="back11">
+				<p class="dec">作者：金庸</p>
+				<p>杨过出生无父，幼年丧母，自此过着流亡生活。后遇到疯癫的欧阳锋，认作义父，因此个性倔强，与郭芙和武氏兄弟的关系很不融洽……</p>
+			</div>
+		</div>
+		<div id="fif" class="fif">
+			<p class="back5">时间煮雨<br/>神话仙侠</p>
+			<div class="back55">
+				<p class="dec">作者：墨瑾颜</p>
+				<p>前世，她天真可爱不知世事，被继母与继姐和那个她爱到灵魂深处的男人所害。 她有幸重生……</p>
+			</div>
+		</div>
+		<div id="six" class="fif">
+			<p class="back5">格列佛游记<br/>经典名著</p>
+			<div class="back55">
+				<p class="dec">作者：乔纳森·斯威夫特</p>
+				<p>1699年，外科医生格列佛随“羚羊号”出航南太平洋。不幸中途遇险，格列佛死里逃生，漂到利立浦特（小人国），被小人捆住……</p>
+			</div>
+		</div>
+		<div id="sev" class="fif">
+			<p class="back5">小王子<br/>未来科幻</p>
+			<div class="back55">
+				<p class="dec">作者：安东尼·德·圣·埃克苏佩里</p>
+				<p>小王子有一个小小的星球，只要挪一挪椅子就能看见四十三次落日。有一天，风带来一颗种子，那是一朵玫瑰的种子，于是他的星球上就多了一朵玫瑰花……</p>
+			</div>
+		</div>
+		<div id="eig" class="fif">
+			<p class="back5">十宗罪<br/>悬疑恐怖</p>
+			<div class="back55">
+				<p class="dec">作者：蜘蛛</p>
+				<p>本书讲述了诡异绝顶的十大凶案：地窖囚奴、雨夜幽灵、人皮草人、色狼传说、精神病院、肢体雪人……</p>
+			</div>
+		</div>
+	</div>
+	<div class="last">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;写在最后的话：我们立志于做一个推荐文学作品的优良网站。为大家提供可以在闲暇时间消磨时光的一种方式，一种选择，一种惬意。也许我们不能让大家感受的属于书本独有的书香水墨的气息，但是我们愿意做他的传播者与结合者。通过我们，大家可以找到属于自己的书香生活。推予，推荐予你，留香予我
+	</div>
+	<div id = "biao">
+    	<div>
+	    	<a href="#">
+				<img src = "images/向上.png">
+			</a>
+		</div>
+	</div>
+	<div class="mowei">
+        <div class="mowei-yi">
+            <p id="a-yi">首页&nbsp;&nbsp;|&nbsp;&nbsp;推予互动娱乐&nbsp;&nbsp;|&nbsp;&nbsp;隐私保护指引&nbsp;&nbsp;|&nbsp;&nbsp;广告服务及商务合作&nbsp;&nbsp;|&nbsp;&nbsp;专业客服&nbsp;&nbsp;|&nbsp;&nbsp;服务条款&nbsp;&nbsp;|&nbsp;&nbsp;法律服务</p>
+            <p id="a-er"> 2019-2020 推予 版权所有</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">	
+	function getStyle(obj, attr){
+		if(obj.currentStyle){
+			return obj.currentStyle[attr];
+		} else {
+			return getComputedStyle(obj, null)[attr];
+		}
+	}
+	function animate(obj,json,callback){
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			var isStop = true;
+			for(var attr in json){
+				var now = 0;
+				if(attr == 'opacity'){
+					now = parseInt(getStyle(obj,attr)*100);
+				}else{
+					now = parseInt(getStyle(obj,attr));
+				}
+				var speed = (json[attr] - now) / 8;
+				speed = speed>0?Math.ceil(speed):Math.floor(speed);
+				var cur = now + speed;
+				if(attr == 'opacity'){
+					obj.style[attr] = cur / 100;
+				}else{
+					obj.style[attr] = cur + 'px';
+				}
+				if(json[attr] !== cur){
+					isStop = false;
+				}
+			}
+			if(isStop){
+				clearInterval(obj.timer);
+				callback&&callback();
+			}
+		}, 30)
+	}
+	var word=document.getElementById("word");
+	var box=document.getElementById("box");
+	var oNavlist=document.getElementById("nav").children;
+	var slider=document.getElementById("slider");
+	var slide=document.getElementById("slide");
+	var left=document.getElementById("left");
+	var right=document.getElementById("right");
+	var index=1;
+	var isMoving=false;
+	var j=800;
+	var k=1;
+	function roll(){
+		if(5*k>1600){
+			word.style.left='800px';
+			k=1;
+		}
+		word.style.left=(j-5*k)+'px';
+		k++;	
+	}
+	var rol=setInterval(roll,100);
+	function next(){
+		if(isMoving){
+			return;
+		}
+		isMoving=true;
+		index++;
+		navmove();
+		animate(slider,{left:-350*index},function(){
+		if(index==6){
+			slider.style.left='-350px';
+			index=1;
+		}
+		isMoving=false;
+		});
+	}
+	var timer=setInterval(next,3000);
+	box.onmouseover=function(){
+		animate(left,{opacity:50})
+		animate(right,{opacity:50})
+		clearInterval(timer);
+	}
+	box.onmouseout=function(){
+		animate(left,{opacity:0});
+		animate(right,{opacity:0});
+		timer=setInterval(next,3000);
+	}
+	for(var i=0;i<oNavlist.length;i++){
+		oNavlist[i].index=i;
+		oNavlist[i].onclick=function(){
+			index=this.index+1;
+			navmove();
+			animate(slider,{left:-350*index});
+		}
+	}
+	right.onclick=next;
+	left.onclick=back;
+	function back(){
+		if(isMoving){
+			return;
+		}
+		isMoving=true;
+		index--;
+		navmove();
+		animate(slider,{left:-350*index},function(){
+			if(index==0){
+				slider.style.left='-1750px';
+				index=5;
+			}
+			isMoving=false;
+		});
+	}
+	function navmove(){
+		for(var i=0;i<oNavlist.length;i++){
+			oNavlist[i].className='';
+		}
+		if(index>5){
+			oNavlist[0].className='active';
+		}
+		else if(index<=0){
+			oNavlist[4].className='active';
+		}
+		else{
+			oNavlist[index-1].className='active';
+		}
+	}
+</script>	
+</html>
